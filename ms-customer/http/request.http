@@ -1,0 +1,7 @@
+http://localhost:7070/customer/test
+###
+http://localhost:7070/customer/list
+###
+http://localhost:7070/customer/token
+###
+http://localhost:7070/customer/currency?from=EUR&to=USD&amount=100
