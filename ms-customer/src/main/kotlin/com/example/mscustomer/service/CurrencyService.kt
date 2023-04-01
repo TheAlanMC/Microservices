@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestHeader
 import org.springframework.web.bind.annotation.RequestParam
 import java.math.BigDecimal
 
-@FeignClient(name = "ms-currency", url= "http://localhost:8080/v1/api/currency")
+@FeignClient(name = "currency-converter")
 interface CurrencyService {
 
-    @GetMapping("", consumes = ["application/json"])
+    @GetMapping("/v1/api/currency", consumes = ["application/json"])
     fun getCurrency(
         @RequestParam to: String,
         @RequestParam from: String,

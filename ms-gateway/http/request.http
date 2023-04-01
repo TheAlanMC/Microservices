@@ -1,0 +1,1 @@
+GET http://localhost:8282/ms-customer/customer/list

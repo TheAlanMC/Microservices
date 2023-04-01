@@ -3,16 +3,12 @@ package com.example.mscustomer.dto
 import feign.form.FormProperty
 
 class TokenRequestDto  (
-    val grantType: String,
-    val clientId: String,
-    val clientSecret: String
-){
+    @FormProperty("response_type")
+    var responseType: String,
     @FormProperty("grant_type")
-    var grant_type: String = grantType
-
+    var grantType: String,
     @FormProperty("client_id")
-    var client_id: String = clientId
-
+    var clientId: String,
     @FormProperty("client_secret")
-    var client_secret: String = clientSecret
-}
+    var clientSecret: String
+)
