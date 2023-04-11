@@ -6,6 +6,8 @@ spring:
     config:
         server:
             git:
-            uri:
-
+              uri: https://github.com/TheAlanMC/server-config.git
+            default-label: main
+  application:
+    name: ms-config-server
 
