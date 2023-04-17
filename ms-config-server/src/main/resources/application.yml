@@ -2,12 +2,58 @@ server:
   port: 8888
 
 spring:
+  application:
+    name: ms-config-server
   cloud:
     config:
         server:
             git:
-              uri: https://github.com/TheAlanMC/server-config.git
-            default-label: main
-  application:
-    name: ms-config-server
+#              uri: https://github.com/TheAlanMC/config-server.git
+              uri: git@github.com:TheAlanMC/config-server.git
+              default-label: main
+              ignoreLocalSshSettings: true
+              hostKey: AAAAB3NzaC1yc2EAAAADAQABAAABgQCj7ndNxQowgcQnjshcLrqPEiiphnt+VTTvDP6mHBL9j1aNUkY4Ue1gvwnGLVlOhGeYrnZaMgRK6+PKCUXaDbC7qtbW8gIkhL7aGCsOr/C56SJMy/BCZfxd1nWzAOxSDPgVsmerOBYfNqltV9/hWCqBywINIR+5dIg6JTJ72pcEpEjcYgXkE2YEFXV1JHnsKgbLWNlhScqb2UmyRkQyytRLtL+38TGxkxCflmO+5Z8CSSNY7GidjMIZ7Q4zMjA2n1nGrlTDkzwDCsw+wqFPGQA179cnfGWOWRVruj16z6XyvxvjJwbz0wQZ75XK5tKSb7FNyeIEs4TT4jk+S4dhPeAUC5y+bDYirYgM4GC7uEnztnZyaVWQ7B381AK4Qdrwt51ZqExKbQpTUNn+EjqoTwvqNj4kqx5QUCI0ThS/YkOxJCXmPUWZbhjpCg56i+2aB6CmK2JGhn57K5mj0MNdBXA4/WnwH6XoPWJzK5Nyu2zB3nAZp+S5hpQs+p1vN1/wsjk=
+              hostKeyAlgorithm: ssh-rsa
+              privateKey: |
+                          -----BEGIN OPENSSH PRIVATE KEY-----
+                          b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+                          NhAAAAAwEAAQAAAYEAnhtI85ijkEuSHYFqsdKizhr5qI7xb/fjoYmVfagy+TbQfi8f2uUb
+                          57Sn14h8y9Te5G2FU9sosqnAJu3BBlvcl1I8eN4yHubX6cQqQ5cCEhAHDc8WxXzFsCoZME
+                          vtK254HTe5Nj59qxZkhRsS2YsHXvEsXQ1CDMF5WYcbrg581j/B44gXQhIVbczGBzalHfzu
+                          yNheMlDrw0USt+4j5ieP2oH4ZsxuCjqnxIL5eUi6sUcY+5txa4mrLQ7oczSco03244eJ3R
+                          GKx5mYFNN0/9L1J9bouYNFczoGiLsTZiT6ooIMXs5IN7NBBPQp3FRcdp3eetDdY4GnlcnD
+                          bPnNsi/ficbQb6qIAmu1DNbxEI0YP3aBVDci9GVAWKl0zMbUdRB9ApFkz1hjgf47ucwR08
+                          ANgdudnYdWfORR7te316rY2saZfNoZEL9id49jpGmiwr7KqHgHZEelcIcdOkGKTSlN7x1h
+                          q/YlWu8MITGetLaeYAr4vJfesBl2Oc+Y3jpbhG5TAAAFqI8zWhSPM1oUAAAAB3NzaC1yc2
+                          EAAAGBAJ4bSPOYo5BLkh2BarHSos4a+aiO8W/346GJlX2oMvk20H4vH9rlG+e0p9eIfMvU
+                          3uRthVPbKLKpwCbtwQZb3JdSPHjeMh7m1+nEKkOXAhIQBw3PFsV8xbAqGTBL7StueB03uT
+                          Y+fasWZIUbEtmLB17xLF0NQgzBeVmHG64OfNY/weOIF0ISFW3Mxgc2pR387sjYXjJQ68NF
+                          ErfuI+Ynj9qB+GbMbgo6p8SC+XlIurFHGPubcWuJqy0O6HM0nKNN9uOHid0RiseZmBTTdP
+                          /S9SfW6LmDRXM6Boi7E2Yk+qKCDF7OSDezQQT0KdxUXHad3nrQ3WOBp5XJw2z5zbIv34nG
+                          0G+qiAJrtQzW8RCNGD92gVQ3IvRlQFipdMzG1HUQfQKRZM9YY4H+O7nMEdPADYHbnZ2HVn
+                          zkUe7Xt9eq2NrGmXzaGRC/YnePY6RposK+yqh4B2RHpXCHHTpBik0pTe8dYav2JVrvDCEx
+                          nrS2nmAK+LyX3rAZdjnPmN46W4RuUwAAAAMBAAEAAAGAK6k5Qhvav1Q/K2q7vhN+5g/I9e
+                          VTgyofcFKAN80lFnEurknxMA+o3xmiaADHBbrpOoeMFBYnbP83kwiBD3J6vkb1cCNcD/CL
+                          m4CSc0vWRIqsiAGyNiM4rGdTwWSWQDIndVoYCYTES2TJqYBKekzMYkmTiLbKkJ81FaYb3L
+                          sfekLtFhpU4egAhuvPm9pZSqi4gDpP+PEjyi7e9nAK9dni/eJ6aFj34ldEUR4iKn4NIDuU
+                          CJdqgNnprW26f2X+A5LZtdToDEC+x97vawj7zXGMLrUn9pZHWAIMY4RZ13O7CgIOEJSsot
+                          Ej+NBzD7Gsn9rp0K2AoBV+Mo/SKo/ThQWK5sWnNOQufuP46+eHBk/lWJ4mFH6uQeI+FBF3
+                          z77wsaTQnfYTGuqqHoqt5H3pYZpDdHNZubK1Mz5gkURgsf46k/1qQsmf5zkbG7nU469a7T
+                          uBXukOciAfShxflQts4dVO2TpbdOJmAZ/M2fDy3hbxUNgQ0XFFdHXNyRuXhMa6lS1RAAAA
+                          wQDJswsdIf3HIlzREtTh34qx+Xv6AWsqwBUqfdhM231hR6Gitg9EQs8tZzCYTPD3akNDyd
+                          sReKT08drKjXtjeh+gUSmcIGVSR06n3cx7UGQD9xLdcooqylzPm53S3GbrW1p0w/MIuQ6z
+                          dFD0ydMxocryNR1uf/SwZrRXbf61ZKCEavIZhCqumtcVNtc/k/hOu8hs+WCfcdnQOMLbrf
+                          Fdj8wWfjJXiyBvZU/G1IkKGlQpxxDgo7HM70m3vfjbKSlcPTgAAADBANERkIaz1lrzkZz0
+                          BLmAtNaRNNKzRepidlsCwn1BpwoWL5CGaKm3UO9Wb697ktkeWRc/4crKYq0Q4JemxxO3C0
+                          4WWNLqxo6sG+l8SV7yvpxcL4hj5Pb4ZnqeG92tExRGazlv2MOEodWREEwpZDRevkxbJGl5
+                          ngaMxjonG1YZ1XOe0k3qJ3HPqnAwBC7gPTGjF3x+D4IQ30JVZ3edwTq3dPlI8JXlYycGtk
+                          4FoOCuLpr3N7G9F3Z22BrXh2Qtm0x2HwAAAMEAwZkcxNQy37WuD6UtP6dpIw4aQo4N36yH
+                          Ib4f6dsdiT4AsoR0QZpo21w1WYHKPoiinmRLNi2+1wpaKCilSbonF2KHBdtKecvEBzLk1O
+                          V3TncLrvVLDVh7g7Du0+cjOfQa+BVWu6fHUIciVJno9FddUNjoJL4KwoF5jGQWF9UD7/fL
+                          QRnyAUJ2scfedi8Vx4+nXmmGykWxBBMTaOqnaryGScAemiCPcw30bLTvGkChOXkCoGWAck
+                          E9Emq4cQzJyDlNAAAALmNocmlzYWxhbmFwYXphYWd1aWxhckBDaHJpc3MtTWFjQm9vay1Q
+                          cm8ubG9jYWwBAgME
+                          -----END OPENSSH PRIVATE KEY-----
 
+encrypt:
+  key: b2PWUsyYaFI9K9ZaArkIDRQQ9S8XsM
