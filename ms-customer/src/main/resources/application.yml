@@ -4,9 +4,21 @@ server:
 spring:
   application:
     name: ms-customer
+  zipkin:
+    discovery-client-enabled: true
+    base-url: http://localhost:9411
+  #    enabled: false
+
+  rabbitmq:
+    host:  sparrow-01.rmq.cloudamqp.com
+    port: 5672
+    username: itggwiot
+    password: FNAc7QotPFaC73UICw8YedtO6GVSspwD
+    virtual-host: itggwiot
 
 eureka:
   client:
     register-with-eureka: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+#    enabled: false

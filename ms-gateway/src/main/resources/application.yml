@@ -30,6 +30,12 @@ spring:
             - Path=/ms-account/**
           filters:
             - RewritePath=/ms-account/(?<segment>.*), /$\{segment}
+        - id: currency-converter
+          uri: lb://currency-converter
+          predicates:
+            - Path=/currency-converter/**
+          filters:
+            - RewritePath=/currency-converter/(?<segment>.*), /$\{segment}
 
 #  cloud:
 #    gateway:

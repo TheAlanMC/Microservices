@@ -1,1 +1,3 @@
 GET http://localhost:8282/ms-customer/customer/list
+###
+GET http://localhost:8282/currency-converter/v1/api/currency/test-notification?message=Test
